@@ -20,9 +20,25 @@ public class Main {
 
         sc.close();
 
-        
+        for (int i=0; i<sb.length();i++) {
+            String a=" ";
+            if (sb.charAt(i)==('.')){
+                //sb.replace(i,i+1, a);
+                sb.deleteCharAt(i);
+                sb.insert(i,' ');
+            }
+            if (sb.charAt(i)==(',') && sb.charAt(i+1)=='\n'){
+                sb.deleteCharAt(i);
+                sb.insert(i,' ');
+            }
 
-            String[] str = sb.toString().split(" |/n|,");
+            if (sb.charAt(i)==(',')) {
+                sb.deleteCharAt(i);
+            }
+        }
+            String[] str = sb.toString().split(" ");
+
+
             for (String s : str){
             System.out.println(s);
         }
