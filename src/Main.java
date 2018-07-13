@@ -5,6 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        char[] vowels= {'у', 'е', 'ы', 'а', 'о', 'э', 'я', 'и', 'ё', 'ю'};
         File myFile = new File("Stih.txt");
         Scanner sc = null;
         try {
@@ -21,22 +22,23 @@ public class Main {
         sc.close();
 
         for (int i=0; i<sb.length();i++) {
-            String a=" ";
-            if (sb.charAt(i)==('.')){
-                //sb.replace(i,i+1, a);
-                sb.deleteCharAt(i);
-                sb.insert(i,' ');
-            }
-            if (sb.charAt(i)==(',') && sb.charAt(i+1)=='\n'){
-                sb.deleteCharAt(i);
-                sb.insert(i,' ');
-            }
 
-            if (sb.charAt(i)==(',')) {
+            if (sb.charAt(i)==('.')){
                 sb.deleteCharAt(i);
+                sb.insert(i,' ');
+
+            }
+            if (sb.charAt(i)==(',')){
+                sb.deleteCharAt(i);
+                if (sb.charAt(i)!=(' ')){
+                    sb.insert(i,' ');
+                }
             }
         }
-            String[] str = sb.toString().split(" ");
+
+            String sbLowercase=sb.toString().toLowerCase();
+            String[] str = sbLowercase.split(" ");
+
 
 
             for (String s : str){
