@@ -1,7 +1,13 @@
+package A12;
+
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/*
+    Халыкбаев Алишер
+    String, A12
+    В стихотворении найти количество слов, начинающихся и заканчивающихся гласной буквой.
+*/
 public class Main {
 
     public static void main(String[] args) {
@@ -16,7 +22,7 @@ public class Main {
 
             while ((line = br.readLine()) != null){
 
-                String sbLowercase=line.toString().toLowerCase();
+                String sbLowercase=line.toLowerCase();
                 String[] str = sbLowercase.split("[ —,;:.!?]");
 
                 Pattern pattern = Pattern.compile("^[уеёыаоэяию].*[уеёыаоэяию]$");
