@@ -1,48 +1,39 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        char[] vowels= {'у', 'е', 'ы', 'а', 'о', 'э', 'я', 'и', 'ё', 'ю'};
-        File myFile = new File("Stih.txt");
-        Scanner sc = null;
-        try {
-            sc = new Scanner(myFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        int n=0;
 
-        StringBuffer sb = new StringBuffer();
-        while (sc.hasNext()) {
-            sb.append(sc.nextLine());
-        }
+        try{
 
-        sc.close();
+            FileInputStream fs = new FileInputStream("Stih.txt");
+            BufferedReader br = new BufferedReader(new InputStreamReader(fs));
+            String line;
 
-        for (int i=0; i<sb.length();i++) {
+            while ((line = br.readLine()) != null){
 
-            if (sb.charAt(i)==('.')){
-                sb.deleteCharAt(i);
-                sb.insert(i,' ');
+                String sbLowercase=line.toString().toLowerCase();
+                String[] str = sbLowercase.split("[ —,;:.!?]");
 
-            }
-            if (sb.charAt(i)==(',')){
-                sb.deleteCharAt(i);
-                if (sb.charAt(i)!=(' ')){
-                    sb.insert(i,' ');
+                Pattern pattern = Pattern.compile("^[уеёыаоэяию].*[уеёыаоэяию]$");
+
+                for (String word : str) {
+                   Matcher matcher = pattern.matcher(word);
+                    if (matcher.find()) {
+                        n++;
+                        System.out.println(word);
+                    }
                 }
             }
+
+            System.out.println(n);
+        }catch (IOException e){
+            System.out.println("Ошибка");
         }
 
-            String sbLowercase=sb.toString().toLowerCase();
-            String[] str = sbLowercase.split(" ");
-
-
-
-            for (String s : str){
-            System.out.println(s);
-        }
     }
 }
