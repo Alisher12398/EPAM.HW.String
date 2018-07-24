@@ -26,23 +26,23 @@ public class Main {
 
 
         sb[0]=new StringBuffer("");
-        //sb[0].append("A");
-        //sb[0].insert(0,"A");
         sb[0].append(ch2);
-      /*  for (int j=0; j<st.length()-1; j++) {
+
+        for (int j=1; j<st.length(); j++) {
             sb[j]=new StringBuffer("");
             char temp=ch2[st.length()-1];
+            char temp_current;
+            char temp_prev=ch2[0];
+
             for (int i=1; i<st.length(); i++){
-
+                 temp_current=ch2[i];
+                 ch2[i]=temp_prev;
+                 temp_prev=temp_current;
             }
+            ch2[0]=temp;
+            sb[j].append(ch2);
+            System.out.println(sb[j]);
+        }
 
-        }
-*/
-      System.out.println(sb[0]);
-/*
-        for (int i=0; i<st.length(); i++){
-            System.out.println(sb[i]);
-        }
-*/
     }
 }
