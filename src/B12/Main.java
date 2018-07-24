@@ -25,15 +25,15 @@ public class Main {
 
             while ((line=br.readLine()) != null){
 
-                //String sbLowercase=line.toLowerCase();
-                //String[] str = sbLowercase.split("[ —,;:.!?]");
+                String sbLowercase=line.toLowerCase();
+                String[] str = sbLowercase.split(" ");
 
                 Pattern pattern = Pattern.compile("^[йцкнгшщзхфвпрлджчсмтб]");
                 //FileWriter writer = new FileWriter("B12.txt", false);
 
 
 
-                for (String word : sbLowercase) {
+                for (String word : str) {
                     Matcher matcher = pattern.matcher(word);
                     if (!matcher.find() && word.length()!=n) {
 
