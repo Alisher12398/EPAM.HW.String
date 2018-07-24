@@ -27,7 +27,7 @@ public class Main {
 
         sb[0]=new StringBuffer("");
         sb[0].append(ch2);
-
+        System.out.println(sb[0]);
         for (int j=1; j<st.length(); j++) {
             sb[j]=new StringBuffer("");
             char temp=ch2[st.length()-1];
