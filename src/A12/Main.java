@@ -37,9 +37,14 @@ public class Main {
             }
 
             System.out.println(n);
+
+            fs.close();
+            br.close();
         }catch (IOException e){
             System.out.println("Ошибка");
         }
+
+
 
     }
 }
