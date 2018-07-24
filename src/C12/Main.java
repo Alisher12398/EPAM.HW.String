@@ -20,29 +20,25 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String st=sc.nextLine();
         StringBuffer[] sb=new StringBuffer[st.length()];
-        char[] ch2=st.toCharArray();
-        StringBuffer sb2=new StringBuffer();
-        String[] st2= new String[st.length()];
-
+        char[] charArray=st.toCharArray();
 
         sb[0]=new StringBuffer("");
-        sb[0].append(ch2);
+        sb[0].append(charArray);
         System.out.println(sb[0]);
         for (int j=1; j<st.length(); j++) {
             sb[j]=new StringBuffer("");
-            char temp=ch2[st.length()-1];
+            char temp=charArray[st.length()-1];
             char temp_current;
-            char temp_prev=ch2[0];
+            char temp_prev=charArray[0];
 
             for (int i=1; i<st.length(); i++){
-                 temp_current=ch2[i];
-                 ch2[i]=temp_prev;
+                 temp_current=charArray[i];
+                 charArray[i]=temp_prev;
                  temp_prev=temp_current;
             }
-            ch2[0]=temp;
-            sb[j].append(ch2);
+            charArray[0]=temp;
+            sb[j].append(charArray);
             System.out.println(sb[j]);
         }
-
     }
 }
