@@ -1,5 +1,3 @@
-package A12;
-
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,7 +6,7 @@ import java.util.regex.Pattern;
     String, A12
     В стихотворении найти количество слов, начинающихся и заканчивающихся гласной буквой.
 */
-public class Main {
+public class A12 {
 
     public static void main(String[] args) {
 
@@ -35,7 +33,6 @@ public class Main {
                     }
                 }
             }
-
 
             System.out.println(n);
 

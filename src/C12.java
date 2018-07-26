@@ -1,4 +1,3 @@
-package C12;
 import java.util.Scanner;
 import java.util.Comparator;
 import java.util.Set;
@@ -15,7 +14,7 @@ JAVA циклические сдвиги — это JAVA, AVAJ, VAJA, AJAV. По
 Барроуза — Уиллера для данного слова.
  */
 
-public class Main implements Comparator<StringBuffer>{
+public class C12 implements Comparator<StringBuffer>{
 
     @Override public int compare(StringBuffer s1, StringBuffer s2)
     {
@@ -30,7 +29,7 @@ public class Main implements Comparator<StringBuffer>{
         
         StringBuffer[] shiftsOfInputString=new StringBuffer[inputString.length()];
         char[] charArray=inputString.toCharArray();
-        Set<StringBuffer> sortedSet = new TreeSet<>(new Main());
+        Set<StringBuffer> sortedSet = new TreeSet<>(new C12());
 
         shiftsOfInputString[0]=new StringBuffer();
         shiftsOfInputString[0].append(charArray);
@@ -52,10 +51,10 @@ public class Main implements Comparator<StringBuffer>{
             sortedSet.add(shiftsOfInputString[j]);
         }
 
-        StringBuffer[] ans2=sortedSet.toArray(new StringBuffer[sortedSet.size()]);
+        StringBuffer[] arrayOfSortedSet=sortedSet.toArray(new StringBuffer[sortedSet.size()]);
 
         for (int i=0; i<inputString.length(); i++){
-            System.out.print(ans2[i].charAt(inputString.length()-1));
+            System.out.print(arrayOfSortedSet[i].charAt(inputString.length()-1));
         }
 
     }
