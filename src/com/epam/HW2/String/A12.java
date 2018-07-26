@@ -1,9 +1,11 @@
+package com.epam.HW2.String;
+
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /*
     Халыкбаев Алишер
-    String, A12
+    String, com.epam.HW2.String.A12
     В стихотворении найти количество слов, начинающихся и заканчивающихся гласной буквой.
 */
 public class A12 {

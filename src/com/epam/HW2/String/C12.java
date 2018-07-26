@@ -1,3 +1,5 @@
+package com.epam.HW2.String;
+
 import java.util.Scanner;
 import java.util.Comparator;
 import java.util.Set;

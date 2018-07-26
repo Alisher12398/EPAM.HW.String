@@ -1,3 +1,5 @@
+package com.epam.HW2.String;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,7 +8,7 @@ import java.util.regex.Pattern;
 
 /*
     Халыкбаев Алишер
-    String, B12
+    String, com.epam.HW2.String.B12
     Из текста удалить все слова заданной длины, начинающиеся на согласную букву.
 */
 public class B12 {
