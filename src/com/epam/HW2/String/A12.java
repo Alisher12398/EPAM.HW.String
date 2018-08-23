@@ -10,13 +10,13 @@ import java.util.regex.Pattern;
 */
 public class A12 {
 
-    public static void main(String[] args) {
+    public void A12(String path) {
 
         int n=0;
 
         try{
 
-            FileInputStream fs = new FileInputStream("Stih.txt");
+            FileInputStream fs = new FileInputStream(path);
             BufferedReader br = new BufferedReader(new InputStreamReader(fs));
             String line;
 

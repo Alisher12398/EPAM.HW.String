@@ -12,15 +12,15 @@ import java.util.regex.Pattern;
     Из текста удалить все слова заданной длины, начинающиеся на согласную букву.
 */
 public class B12 {
-    public static void main(String[] args) {
-
+    public void B12(String path) {
+        System.out.println("Введите длину для поиска слов");
         Scanner sc= new Scanner(System.in);
         int n=sc.nextInt();
         sc.close();
         ArrayList<String> answerArray=new ArrayList<>();
 
         try {
-            FileInputStream fs = new FileInputStream("Text2.txt");
+            FileInputStream fs = new FileInputStream(path);
             BufferedReader br = new BufferedReader(new InputStreamReader(fs));
             String line;
 

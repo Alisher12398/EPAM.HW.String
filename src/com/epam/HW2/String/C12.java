@@ -23,12 +23,12 @@ public class C12 implements Comparator<StringBuffer>{
         return s1.toString().compareTo(s2.toString());
     }
 
-    public static void main(String[] args){
-
+    public void C12(String inputString){
+/*
         Scanner sc = new Scanner(System.in);
         String inputString=sc.nextLine();
         sc.close();
-        
+        */
         StringBuffer[] shiftsOfInputString=new StringBuffer[inputString.length()];
         char[] charArray=inputString.toCharArray();
         Set<StringBuffer> sortedSet = new TreeSet<>(new C12());
